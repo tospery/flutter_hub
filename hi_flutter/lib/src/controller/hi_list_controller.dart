@@ -9,7 +9,15 @@ class HiListController<T> extends HiBaseController {
   RefreshController? refreshController;
   RxList<T> items = <T>[].obs;
   Rx<HiError?> error = Rx<HiError?>(null);
-  var aaa = GetView;
+
+  @override
+  void onInit() {
+    super.onInit();
+    enablePullRefresh =
+        Get.parameters.boolForKey(HiParameter.canRefresh) ?? false;
+            enableLoadingMore =
+        Get.parameters.boolForKey(HiParameter.canLoadMore) ?? false;
+  }
 
   void finish({List? items, HiError? error}) {
     this.error.value = error;

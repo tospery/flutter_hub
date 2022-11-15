@@ -8,12 +8,7 @@ class UserController extends HiListController<HiModel> {
   @override
   void onInit() {
     super.onInit();
-    // ever(count1, (_) => print("$_ has been changed"));
-    // ever(user, _userUpdate);
-    var a1 = Get.parameters;
-    var a2 = a1.stringForKey(HiParameter.username);
-    log('a1 = $a1');
-    log('a2 = $a2');
+    enablePullRefresh = Get.parameters.boolForKey(HiParameter.canRefresh) ?? true;
   }
 
   @override
@@ -22,14 +17,18 @@ class UserController extends HiListController<HiModel> {
     if (username != user.value.username) {
       current.value = await provider.user(username);
     } else {
-      current.value = user.value as User;
+      if (mode == HiRequestMode.loading) {
+        current.value = user.value as User;
+      } else {
+        current.value = await provider.user(username);
+      }
     }
     items.clear();
     items.addAll([
       HiModel(id: CellId.userInfo.instanceName),
-      const HiSimple(height: 15),
+      const HiSimple(height: 10),
       HiModel(id: CellId.userStat.instanceName),
-      const HiSimple(height: 15),
+      const HiSimple(height: 10),
       HiSimple(
         id: CellId.company.instanceName,
         title: current.value.company ?? R.strings.noDescription.tr,

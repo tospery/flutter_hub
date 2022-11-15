@@ -17,13 +17,8 @@ class AboutController extends HiListController<HiModel> {
     finish(items: items);
   }
 
-  void toAuthor() async {
-    //var result = await provider.user('ReactiveX');
-    // var result = await Get.toNamed(Routes.user.take('ReactiveX'));
-    var result = await Get.toNamed(Routes.user.take('devxoul'));
-    log(result);
-    // var aaa = Get.find<HiConfiguration>();
-    // var bbb = aaa.real;
-    // log('bbb: $bbb');
+  void toAuthor() {
+    Get.toNamed(Routes.user.take('tospery'));
   }
+  
 }

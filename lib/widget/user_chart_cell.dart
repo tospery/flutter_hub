@@ -16,6 +16,8 @@ class UserChartCell extends HiCell<User> {
       height: 120,
       child: SvgPicture.network(
         model.charUrlString,
+                fit: BoxFit.fitHeight,
+        alignment: Alignment.centerRight,
         allowDrawingOutsideViewBox: true,
         placeholderBuilder: (BuildContext context) => SizedBox(
           width: context.width,
