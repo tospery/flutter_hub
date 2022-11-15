@@ -1,0 +1,26 @@
+[
+    {
+        "id": "author",
+        "title": "作者"
+    },
+    {
+        "id": "weibo",
+        "title": "微博"
+    },
+    {
+        "style": 1,
+        "height": 10
+    },
+    {
+        "id": "scheme",
+        "title": "URL Schemes"
+    },
+    {
+        "id": "score",
+        "title": "评分鼓励"
+    },
+    {
+        "id": "share",
+        "title": "分享给好友"
+    }
+]
