@@ -12,8 +12,7 @@ class SchemePage extends HiListPage<SchemeController> {
       padding: EdgeInsets.zero,
       shrinkWrap: true,
       itemCount: controller.items.length,
-      itemBuilder: (context, index) =>
-          controller.items[index].cell(onPressed: controller.doPressed),
+      itemBuilder: (context, index) => controller.items[index].cell(onPressed: (model, {extra}) => controller.doPressed(model, extra, context),),
       separatorBuilder: (context, index) => controller.items[index].separator,
     );
   }

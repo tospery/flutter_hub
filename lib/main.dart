@@ -7,11 +7,14 @@ import 'package:flutter_hub/module/splash/splash_page.dart';
 import 'package:flutter_hub/resource/translations.dart';
 import 'package:hi_flutter/hi_flutter.dart';
 
+//final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Injection.ready();
   runApp(
     GetMaterialApp(
+      // navigatorKey: navigatorKey,
       enableLog: true,
       logWriterCallback: (text, {bool isError = false}) {
         Future.microtask(() => log('$text, isError = $isError'));
