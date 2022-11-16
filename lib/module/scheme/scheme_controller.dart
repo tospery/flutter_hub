@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_hub/index.dart';
-import 'package:flutter_hub/main.dart';
 import 'package:hi_flutter/hi_flutter.dart';
+import 'package:clipboard/clipboard.dart';
 
 class SchemeController extends HiListController<HiModel> {
   @override
@@ -29,11 +28,13 @@ class SchemeController extends HiListController<HiModel> {
     if (scheme?.isEmpty ?? true) {
       return;
     }
-    GFToast.showToast(
-      R.strings.haveCopyScheme.tr,
-      context,
-      backgroundColor: Colors.green,
-    );
+    FlutterClipboard.copy(scheme!).then((value) {
+      GFToast.showToast(
+        R.strings.haveCopyScheme.tr,
+        context,
+        backgroundColor: Colors.green,
+      );
+    });
     // Get.snackbar(
     //   '',
     //   '',
