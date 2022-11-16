@@ -7,6 +7,7 @@ class HiSimple extends HiModel {
   final String? color;
   final String? icon;
   final String? title;
+  final String? subTitle;
   final String? detail;
   final bool? indicated;
   final bool? separated;
@@ -25,6 +26,7 @@ class HiSimple extends HiModel {
     this.color,
     this.icon,
     this.title,
+    this.subTitle,
     this.detail,
     this.indicated,
     this.separated,
@@ -36,6 +38,7 @@ class HiSimple extends HiModel {
         color: json.stringForKey('color'),
         icon: json.stringForKey('icon'),
         title: json.stringForKey('title'),
+        subTitle: json.stringForKey('subTitle'),
         detail: json.stringForKey('detail'),
         indicated: json.boolForKey('indicated'),
         separated: json.boolForKey('separated'),
@@ -46,6 +49,7 @@ class HiSimple extends HiModel {
         'id': id,
         'icon': icon,
         'title': title,
+        'subTitle': subTitle,
         'detail': detail,
         'color': color,
         'height': height,
@@ -60,6 +64,7 @@ class HiSimple extends HiModel {
     String? color,
     String? icon,
     String? title,
+    String? subTitle,
     String? detail,
     bool? indicated,
     bool? separated,
@@ -70,6 +75,7 @@ class HiSimple extends HiModel {
       color: color ?? this.color,
       icon: icon ?? this.icon,
       title: title ?? this.title,
+      subTitle: subTitle ?? this.subTitle,
       detail: detail ?? this.detail,
       indicated: indicated ?? this.indicated,
       separated: separated ?? this.separated,
@@ -78,5 +84,5 @@ class HiSimple extends HiModel {
 
   @override
   List<Object?> get props =>
-      [id, icon, title, detail, color, height, indicated, separated];
+      [id, icon, title, subTitle, detail, color, height, indicated, separated];
 }

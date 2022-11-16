@@ -30,6 +30,7 @@ class HiSimpleCell extends HiCell<HiSimple> {
           ? hiImage(model.icon!, height: 24)
           : null,
       titleText: model.title,
+      subTitleText: model.subTitle,
       icon: _buildTileDetail(context),
       onTap: () => onPressed != null ? onPressed!(model) : null,
     );

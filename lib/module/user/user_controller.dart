@@ -3,17 +3,18 @@ import 'package:flutter_hub/provider/provider.dart';
 import 'package:hi_flutter/hi_flutter.dart';
 
 class UserController extends HiListController<HiModel> {
+  late String username;
   var current = const User().obs;
 
   @override
   void onInit() {
     super.onInit();
     enablePullRefresh = Get.parameters.boolForKey(HiParameter.canRefresh) ?? true;
+    username = parameters.stringForKey(HiParameter.username) ?? user.value.username ?? '';
   }
 
   @override
   void requestData({required HiRequestMode mode}) async {
-    var username = Get.parameters.stringForKey(HiParameter.username) ?? '';
     if (username != user.value.username) {
       current.value = await provider.user(username);
     } else {

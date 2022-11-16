@@ -20,4 +20,5 @@ extension StringsEx on Strings {
   String get joinedOn => 'joinedOn';
   String get noDescription => 'noDescription';
   String get urlSchemes => 'urlSchemes';
+  String get haveCopyScheme => 'haveCopyScheme';
 }

@@ -36,4 +36,5 @@ Map<String, String> zh_CN = {
   R.strings.joinedOn: 'Joined on ',
   R.strings.noDescription: 'No description',
   R.strings.urlSchemes: 'URL Schemes',
+  R.strings.haveCopyScheme: '已复制到剪切板',
 };

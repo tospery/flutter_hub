@@ -1,0 +1,27 @@
+[
+    {
+        "id": "openUser",
+        "title": "Open User",
+        "subTitle": "flutterhub://user?username="
+    },
+    {
+        "id": "openRepository",
+        "title": "Open Repository",
+        "subTitle": "flutterhub://repository?username="
+    },
+    {
+        "id": "openCommit",
+        "title": "Open Commit",
+        "subTitle": "flutterhub://commit?username="
+    },
+    {
+        "id": "openIssues",
+        "title": "Open Issues",
+        "subTitle": "flutterhub://user?username="
+    },
+    {
+        "id": "openPullRequest",
+        "title": "Open Pull Request",
+        "subTitle": "flutterhub://pull?username="
+    }
+]

@@ -36,4 +36,5 @@ Map<String, String> en_US = {
   R.strings.joinedOn: 'Joined on ',
   R.strings.noDescription: 'No description',
   R.strings.urlSchemes: 'URL Schemes',
+  R.strings.haveCopyScheme: 'haveCopyScheme',
 };
