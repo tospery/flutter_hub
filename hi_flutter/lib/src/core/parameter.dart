@@ -7,6 +7,8 @@ class HiParameter {
   static const token = 'token';
   static const title = 'title';
   static const model = 'model';
+  static const extra = 'extra';
+  static const arguments = 'arguments';
   static const username = 'username';
   static const hideNavBar = 'hideNavBar';
   static const hideNavLine = 'hideNavLine';

@@ -35,4 +35,5 @@ Map<String, String> zh_CN = {
   R.strings.feedback: '反馈',
   R.strings.joinedOn: 'Joined on ',
   R.strings.noDescription: 'No description',
+  R.strings.urlSchemes: 'URL Schemes',
 };

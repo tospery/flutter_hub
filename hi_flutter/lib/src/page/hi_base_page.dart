@@ -27,7 +27,7 @@ abstract class HiBasePage<C extends HiBaseController> extends StatefulWidget {
 
   PreferredSizeWidget? appBar(BuildContext context) {
     return AppBar(
-      title: Text(Get.currentRoute.split('/').last.tr),
+      title: Text(controller.title ?? ''),
     );
   }
 

@@ -38,7 +38,7 @@ class HiWebPage<WC extends HiWebController> extends HiBasePage<WC> {
 
   _buildTitle() {
     return Text(
-      controller.title.value,
+      controller.title ?? '',
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
     );

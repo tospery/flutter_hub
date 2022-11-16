@@ -13,23 +13,9 @@ class AboutPage extends HiListPage<AboutController> {
       shrinkWrap: true,
       itemCount: controller.items.length,
       itemBuilder: (context, index) =>
-          controller.items[index].cell(onPressed: _doPressed),
+          controller.items[index].cell(onPressed: controller.doPressed),
       separatorBuilder: (context, index) => controller.items[index].separator,
     );
   }
-
-  void _doPressed(HiModel model, {extra}) {
-    log(model);
-    if (model is! HiSimple) {
-      return;
-    }
-    var id = CellId.fromValue(model.id ?? '');
-    switch (id) {
-      case CellId.author:
-        controller.toAuthor();
-        break;
-      default:
-        break;
-    }
-  }
+  
 }

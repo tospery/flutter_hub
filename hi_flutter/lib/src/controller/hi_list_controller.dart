@@ -14,9 +14,9 @@ class HiListController<T> extends HiBaseController {
   void onInit() {
     super.onInit();
     enablePullRefresh =
-        Get.parameters.boolForKey(HiParameter.canRefresh) ?? false;
+        parameters.boolForKey(HiParameter.canRefresh) ?? false;
             enableLoadingMore =
-        Get.parameters.boolForKey(HiParameter.canLoadMore) ?? false;
+        parameters.boolForKey(HiParameter.canLoadMore) ?? false;
   }
 
   void finish({List? items, HiError? error}) {

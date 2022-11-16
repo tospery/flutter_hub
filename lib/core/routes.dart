@@ -4,6 +4,8 @@ import 'package:flutter_hub/module/language/language_binding.dart';
 import 'package:flutter_hub/module/language/language_page.dart';
 import 'package:flutter_hub/module/oauth/oauth_binding.dart';
 import 'package:flutter_hub/module/oauth/oauth_page.dart';
+import 'package:flutter_hub/module/scheme/scheme_binding.dart';
+import 'package:flutter_hub/module/scheme/scheme_page.dart';
 import 'package:flutter_hub/module/trending/trending_binding.dart';
 import 'package:flutter_hub/module/trending/trending_page.dart';
 import 'package:flutter_hub/module/favorited/favorited_binding.dart';
@@ -44,6 +46,7 @@ class Routes {
   static const about = '/about';
   static const language = '/language';
   static const profile = '/profile';
+  static const scheme = '/scheme';
 
   static final getPages = [
     GetPage(
@@ -110,6 +113,11 @@ class Routes {
       name: user,
       page: () => const UserPage(),
       binding: UserBinding(),
+    ),
+    GetPage(
+      name: scheme,
+      page: () => const SchemePage(),
+      binding: SchemeBinding(),
     ),
   ];
 }
