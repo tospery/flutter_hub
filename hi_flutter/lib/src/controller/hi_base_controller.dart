@@ -9,9 +9,10 @@ import '../utils/hi_provider.dart';
 import '../model/hi_configuration.dart';
 
 class HiBaseController extends GetxController {
-  /// title通常不可变，故使用非响应式，如果需要变，则在具体controller中实现响应式的title
+  /// title通常不可变，故使用非响应式，如果需要变，则在具体controller中实现特定的响应式title
   String? title;
-  late Map<String, dynamic> parameters;
+  // var parameters = <String, dynamic>{};
+  late final Map<String, dynamic> parameters;
   late Rx<HiUser> user;
   late HiConfiguration configuration;
   late HiProvider provider;
@@ -20,14 +21,17 @@ class HiBaseController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    parameters = Get.parameters;
+    var myParameters = <String, dynamic>{};
+    myParameters.addAll(Get.parameters);
+    // parameters = Get.parameters;
     if (Get.arguments != null) {
       if (Get.arguments is Map<String, dynamic>) {
-        parameters += Get.arguments;
+        myParameters.addAll(Get.arguments);
       } else {
-        parameters[HiParameter.arguments] = Get.arguments;
+        myParameters[HiParameter.arguments] = Get.arguments;
       }
     }
+    parameters = myParameters;
     title = parameters.stringForKey(HiParameter.title);
     user = Get.find<HiUser>().obs;
     configuration = Get.find<HiConfiguration>();

@@ -24,6 +24,17 @@ class SchemeController extends HiListController<HiModel> {
   }
 
   doPressed(HiModel model, extra, BuildContext context) {
+    // var result1 = Get.context?.toString();
+    // log('result1 = $result1');
+    // var ctx = Get.context;
+    // if (ctx == null) {
+    //   return;
+    // }
+    // GFToast.showToast(
+    //   R.strings.haveCopyScheme.tr,
+    //   ctx,
+    //   backgroundColor: Colors.green,
+    // );
     var scheme = (model as HiSimple?)?.subTitle;
     if (scheme?.isEmpty ?? true) {
       return;

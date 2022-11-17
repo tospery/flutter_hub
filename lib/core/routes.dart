@@ -27,8 +27,8 @@ import 'package:flutter_hub/module/profile/profile_page.dart';
 import 'package:hi_flutter/hi_flutter.dart';
 
 class Routes {
-  // root
-  static const root = '/';
+  // // root
+  // static const root = '/';
   // splash
   static const splash = '/splash';
   // home

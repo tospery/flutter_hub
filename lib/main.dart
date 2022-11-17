@@ -14,7 +14,7 @@ void main() async {
   await Injection.ready();
   runApp(
     GetMaterialApp(
-      // navigatorKey: navigatorKey,
+      //navigatorKey: Get.key,
       enableLog: true,
       logWriterCallback: (text, {bool isError = false}) {
         Future.microtask(() => log('$text, isError = $isError'));
