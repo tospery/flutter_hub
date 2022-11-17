@@ -16,8 +16,9 @@ export 'package:flutter_easyloading/flutter_easyloading.dart';
 export 'package:flutter_spinkit/flutter_spinkit.dart';
 export 'package:adaptive_dialog/adaptive_dialog.dart';
 export 'package:flukit/flukit.dart';
-export 'package:getwidget/getwidget.dart';
+export 'package:getwidget/getwidget.dart' hide ToastStateFulState;
 export 'package:event_bus/event_bus.dart';
+export 'package:fluttertoast/fluttertoast.dart';
 // core
 export 'src/core/datatype.dart';
 export 'src/core/constant.dart';

@@ -7,6 +7,7 @@ import '../extension/int.dart';
 import '../extension/string.dart';
 import 'package:get/get.dart';
 import '../view/hi_cached_image.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 bool isNotEmpty(String? text) => text?.isNotEmpty ?? false;
 bool isEmpty(String? text) => text?.isEmpty ?? true;
@@ -213,4 +214,19 @@ Widget hiBlur({double? sigma, Widget? child}) {
       child: child,
     ),
   );
+}
+
+Future<bool?> toast(String message) {
+  Fluttertoast.cancel();
+  return Fluttertoast.showToast(
+    msg: message,
+    toastLength: Toast.LENGTH_LONG,
+    gravity: ToastGravity.TOP,
+  );
+}
+
+showLoading({String? title}) {
+}
+
+hideLoading() {
 }
