@@ -46,6 +46,12 @@ class AboutController extends HiListController<HiModel> {
       case CellId.scheme:
         Get.toNamed(Routes.scheme);
         break;
+      case CellId.score:
+        launchUrl(
+          Uri.tryParse(
+              'itms-apps://itunes.apple.com/app/id414478124?action=write-review')!,
+        );
+        break;
       default:
         break;
     }
