@@ -3,10 +3,18 @@ import 'package:flutter_hub/core/datatype.dart';
 import 'package:flutter_hub/core/routes.dart';
 import 'package:flutter_hub/model/appinfo.dart';
 import 'package:flutter_hub/resource/assets_data.dart';
+import 'package:flutter_hub/resource/strings.dart';
 import 'package:hi_flutter/hi_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutController extends HiListController<HiModel> {
+  @override
+  void onInit() {
+    super.onInit();
+    // title = parameters.stringForKey(HiParameter.title);
+    title = parameters.stringForKey(HiParameter.title) ?? R.strings.about.tr;
+  }
+
   @override
   void requestData({required HiRequestMode mode}) async {
     var string = await rootBundle.loadString(R.assets.data.aboutSimples);
